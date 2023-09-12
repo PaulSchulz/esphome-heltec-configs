@@ -1,0 +1,90 @@
+substitutions:
+  name: "heltec-wsl-v3-demo-ledc"
+  friendly_name: "Heltec WSL V3 Demo LEDC"
+  room: ""
+  device_description: "heltec wsl v3 demo ledc"
+  project_name: "Heltec.WSL V3 Demo"
+  project_version: "1.0"
+  relay_restore_mode: RESTORE_DEFAULT_OFF
+
+esphome:
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: true
+  project:
+    name: "${project_name}"
+    version: "${project_version}"
+
+esp32:
+  board: heltec_wifi_lora_32_V3
+  variant: esp32s3
+  framework:
+    type: arduino
+    version: 2.0.9
+    # version: 2.0.10
+    platform_version: 6.4.0
+  # restore_from_flash: true
+
+# preferences:
+#   flash_write_interval: 1min
+
+# Enable Home Assistant API
+api:
+
+ota:
+    
+logger:
+
+mdns:
+  disabled: false
+
+web_server:
+  port: 80
+
+wifi:
+   # This spawns an AP with the device name and mac address with no password.
+  ap: {}
+
+captive_portal:
+  
+dashboard_import:
+  package_import_url: github://PaulSchulz/esphome-heltec-configs/heltec-wsl-v3-demo-ledc.yaml
+
+#############################################################################
+output:
+  - platform: ledc
+    pin: GPIO1
+    id: gpio_1
+
+  - platform: ledc
+    pin: GPIO2
+    id: gpio_2
+
+  - platform: ledc
+    pin: GPIO3
+    id: gpio_3
+
+  - platform: ledc
+    pin: GPIO4
+    id: gpio_4
+
+light:
+  - platform: status_led
+    name: "Status LED"
+    pin: GPIO35
+    
+  - platform: monochromatic
+    output: gpio_1
+    name: "Pin 01"
+
+  - platform: monochromatic
+    output: gpio_2
+    name: "Pin 02"
+
+  - platform: monochromatic
+    output: gpio_3
+    name: "Pin 03"
+
+  - platform: monochromatic
+    output: gpio_4
+    name: "Pin 04"
