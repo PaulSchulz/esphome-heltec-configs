@@ -1,3 +1,5 @@
+# Demonstrate the features of the
+# Heltec Wireless Stick Lite V3
 substitutions:
   name: "heltec-wsl-v3-demo"
   friendly_name: "Heltec WSL V3 Demo"
@@ -58,126 +60,29 @@ light:
     
 switch:
   - platform: gpio
-    pin: 0
-    name: "Pin 00 (User Switch)"
-
-  - platform: gpio
-    pin: 1
-    name: "Pin 01"
-
-  - platform: gpio
-    pin: 2
-    name: "Pin 02"
-
-  - platform: gpio
-    pin: 3
-    name: "Pin 03"
-
-  - platform: gpio
-    pin: 4
-    name: "Pin 04"
-
-  - platform: gpio
-    pin: 5
-    name: "Pin 05"
-
-  - platform: gpio
-    pin: 6
-    name: "Pin 06"
-
-  - platform: gpio
-    pin: 7
-    name: "Pin 07"
-
-  - platform: gpio
-    pin: 12
-    name: "Pin 12"
-
-  - platform: gpio
     pin: 14
     name: "Pin 14"
-    
-  - platform: gpio
-    pin: 15
-    name: "Pin 15"
-    
-  - platform: gpio
-    pin: 16
-    name: "Pin 16"
-    
-  - platform: gpio
-    pin: 17
-    name: "Pin 17"
-    
-  - platform: gpio
-    pin: 18
-    name: "Pin 18"
-   
-  - platform: gpio
-    pin: 19
-    name: "Pin 19"
-
-  - platform: gpio
-    pin: 20
-    name: "Pin 20"
 
   - platform: gpio
     pin: 21
     name: "Pin 21"
 
-    # Pin in use by ESP32-S3 (function: SPICS1)
-    #  - platform: gpio
-    #    pin: 26
-    #    name: "Pin 26"
-
-  - platform: gpio
-    pin: 33
-    name: "Pin 33"
-
-  - platform: gpio
-    pin: 34
-    name: "Pin 34"
-
-  - platform: gpio
-    pin: 35
-    name: "Pin 35 (Status LED)"
-
-  - platform: gpio
-    pin: 36
-    name: "Pin 36"
-    
-  - platform: gpio
-    pin: 37
-    name: "Pin 37"
-
-  - platform: gpio
-    pin: 38
-    name: "Pin 38"
-
   - platform: gpio
     pin: 39
     name: "Pin 39"
-
+    
   - platform: gpio
     pin: 40
     name: "Pin 40"
-
+    
   - platform: gpio
     pin: 41
     name: "Pin 41"
-
+    
   - platform: gpio
     pin: 42
     name: "Pin 42"
-
-  - platform: gpio
-    pin: 43
-    name: "Pin 43"
-
-  - platform: gpio
-    pin: 44
-    name: "Pin 44"
-
+    
   - platform: gpio
     pin: 45
     name: "Pin 45"
